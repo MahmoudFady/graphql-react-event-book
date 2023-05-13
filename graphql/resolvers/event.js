@@ -8,12 +8,13 @@ module.exports = {
     return events;
   },
   createEvent: async (args) => {
-    const { title, description, price, date } = args.eventInput;
+    const { title, description, price, date, creator } = args.eventInput;
     const newEvent = await Event({
       title,
       description,
       price,
       date: new Date(date).toISOString(),
+      creator,
     }).save();
     return newEvent;
   },

@@ -1,8 +1,7 @@
 const Booking = require("../../models/booking");
 module.exports = {
   bookings: async () => {
-    const bookings = await Booking()
-      .find()
+    const bookings = await Booking.find()
       .populate({
         path: "event",
         populate: {

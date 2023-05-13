@@ -12,5 +12,6 @@ module.exports = `
       description :String!
       price : Float!
       date : String!
+      creator: ID!
     }
 `;
